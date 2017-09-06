@@ -1,0 +1,10 @@
+{
+	"priFile": "qpmx-sample-package.pri",
+	"prcFile": "qpmx-sample-package.prc",
+	"license": {
+		"name": "BSD-3-Clause",
+		"file": "LICENSE"
+	}
+	"dependencies": [],
+	"source": false
+}
