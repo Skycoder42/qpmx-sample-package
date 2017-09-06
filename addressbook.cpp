@@ -1,5 +1,9 @@
 #include "addressbook.h"
 
+#ifdef QPMX_TEST_AVAILABLE
+#warning You are compiling the package as source!
+#endif
+
 bool AddressBook::contains(const QString &name) const
 {
 	return _data.contains(name);
