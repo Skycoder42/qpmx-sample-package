@@ -1,0 +1,12 @@
+{
+    "dependencies": [
+        {
+            "package": "https://github.com/Skycoder42/qpmx-sample-package.git",
+            "provider": "git",
+            "version": "1.0.0"
+        }
+    ],
+    "prcFile": "",
+    "priFile": "",
+    "source": false
+}
