@@ -1,4 +1,5 @@
 #include <addressbook.h>
+#include <dialogmaster.h>
 
 int main(int argc, char *argv[])
 {

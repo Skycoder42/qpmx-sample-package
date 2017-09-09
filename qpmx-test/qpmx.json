@@ -1,12 +1,17 @@
 {
-    "dependencies": [
-        {
-            "package": "https://github.com/Skycoder42/qpmx-sample-package.git",
-            "provider": "git",
-            "version": "1.0.0"
-        }
-    ],
-    "prcFile": "",
-    "priFile": "",
-    "source": false
+	"dependencies": [
+		{
+			"package": "https://github.com/skycoder42/qpmx-sample-package.git",
+			"provider": "git",
+			"version": "1.0.0"
+		},
+		{
+			"package": "de.skycoder42.dialog-master",
+			"provider": "qpm",
+			"version": "1.2.7"
+		}
+	],
+	"prcFile": "",
+	"priFile": "",
+	"source": true
 }

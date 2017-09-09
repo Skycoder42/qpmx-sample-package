@@ -5,6 +5,12 @@
 		"name": "BSD-3-Clause",
 		"file": "LICENSE"
 	},
-	"dependencies": [],
+	"dependencies": [
+		{
+			"package": "de.skycoder42.dialog-master",
+			"provider": "qpm",
+			"version": "1.2.7"
+		}
+	],
 	"source": false
 }
