@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += core gui widgets
+QT += core gui widgets network
 
 CONFIG += c++11 console
 CONFIG -= app_bundle
