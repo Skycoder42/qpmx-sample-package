@@ -1,4 +1,5 @@
 #include "addressbook.h"
+#include <dialogmaster.h>
 
 #ifdef QPMX_TEST_AVAILABLE
 #warning You are compiling the package as source!
@@ -22,4 +23,9 @@ void AddressBook::add(const QString &name, const QHostAddress &address)
 void AddressBook::remove(const QString &name)
 {
 	_data.remove(name);
+}
+
+void AddressBook::showAddressDialog(QWidget *parent)
+{
+	DialogMaster::information(parent, "<unimplemented>", "Addresses");
 }

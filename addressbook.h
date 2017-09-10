@@ -4,6 +4,7 @@
 #include <QString>
 #include <QHostAddress>
 #include <QHash>
+#include <QWidget>
 
 class AddressBook
 {
@@ -13,6 +14,8 @@ public:
 	
 	void add(const QString &name, const QHostAddress &address);
 	void remove(const QString &name);
+	
+	static void showAddressDialog(QWidget *parent = nullptr);
 	
 private:
 	QHash<QString, QHostAddress> _data;

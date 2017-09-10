@@ -12,3 +12,5 @@ DISTFILES += qpmx.json
 
 CONFIG += qpmx_verbose
 include(/home/sky/Programming/QtProjects/qpmx/qpmx/qpmx.pri)
+
+message($$SOURCES)
