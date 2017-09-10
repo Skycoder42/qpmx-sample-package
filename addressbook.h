@@ -4,7 +4,7 @@
 #include <QString>
 #include <QHostAddress>
 #include <QHash>
-#include <QWidget>
+class QWidget;
 
 class AddressBook
 {
