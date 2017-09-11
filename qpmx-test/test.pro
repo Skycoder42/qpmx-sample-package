@@ -10,7 +10,9 @@ SOURCES += \
 
 DISTFILES += qpmx.json
 
-CONFIG += qpmx_verbose
-include(/home/sky/Programming/QtProjects/qpmx/qpmx/qpmx.pri)
+QPMX_EXTRA_OPTIONS += --verbose
+
+system(qpmx -d $$shell_quote($$_PRO_FILE_PWD_) init $$QPMX_EXTRA_OPTIONS $$shell_quote($$QMAKE_QMAKE) $$shell_quote($$OUT_PWD)):include($$OUT_PWD/qpmx_generated.pri)
+else: error(qpmx initialization failed)
 
 message($$SOURCES)
