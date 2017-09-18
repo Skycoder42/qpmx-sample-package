@@ -27,5 +27,5 @@ void AddressBook::remove(const QString &name)
 
 void AddressBook::showAddressDialog(QWidget *parent)
 {
-	DialogMaster::information(parent, "<unimplemented>", "Addresses");
+	DialogMaster::information(parent, tr("<unimplemented>"), tr("Addresses"));
 }

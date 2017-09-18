@@ -5,3 +5,5 @@ else: QT += network widgets
 
 HEADERS += $$PWD/addressbook.h
 SOURCES += $$PWD/addressbook.cpp
+
+QPMX_TRANSLATIONS += addressbook_de.ts

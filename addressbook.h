@@ -8,6 +8,8 @@ class QWidget;
 
 class AddressBook
 {
+	Q_DECLARE_TR_FUNCTIONS(AddressBook)
+	
 public:
 	bool contains(const QString &name) const;
 	QHostAddress address(const QString &name) const;
