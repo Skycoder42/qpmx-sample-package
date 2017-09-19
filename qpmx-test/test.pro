@@ -8,7 +8,10 @@ CONFIG -= app_bundle
 SOURCES += \
 	main.cpp
 
-DISTFILES += qpmx.json
+TRANSLATIONS += test_de.ts
+
+DISTFILES += qpmx.json \
+	$$TRANSLATIONS
 
 QPMX_EXTRA_OPTIONS += --verbose
 

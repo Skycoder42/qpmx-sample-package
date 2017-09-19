@@ -8,8 +8,8 @@ int main(int argc, char *argv[])
 	QCoreApplication a(argc, argv);
 
 	AddressBook book;
-	book.add("home", QHostAddress::LocalHost);
-	qDebug() << "home is:" << book.address("home");
+	book.add(QCoreApplication::translate("GLOBAL", "home"), QHostAddress::LocalHost);
+	qDebug().noquote() << QCoreApplication::translate("GLOBAL", "home is:") << book.address(QCoreApplication::translate("GLOBAL", "home"));
 
 	return 0;
 }
