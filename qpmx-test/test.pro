@@ -8,7 +8,8 @@ CONFIG -= app_bundle
 SOURCES += \
 	main.cpp
 
-TRANSLATIONS += test_de.ts
+TRANSLATIONS += test_de.ts \
+	$$PWD/test_en.ts
 
 DISTFILES += qpmx.json \
 	$$TRANSLATIONS
