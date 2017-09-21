@@ -1,8 +1,10 @@
 #include "addressbook.h"
 #include <dialogmaster.h>
 
+#ifndef Q_OS_WIN
 #ifdef QPMX_TEST_AVAILABLE
 #warning You are compiling the package as source!
+#endif
 #endif
 
 bool AddressBook::contains(const QString &name) const
