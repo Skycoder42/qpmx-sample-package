@@ -12,6 +12,7 @@ TRANSLATIONS += test_de.ts \
 	$$PWD/test_en.ts
 
 DISTFILES += qpmx.json \
+	qpmx.json.src \
 	$$TRANSLATIONS
 
 QPMX_EXTRA_OPTIONS += --verbose
