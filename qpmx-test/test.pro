@@ -13,6 +13,7 @@ TRANSLATIONS += test_de.ts \
 
 DISTFILES += qpmx.json \
 	qpmx.json.src \
+	qpmx.json.user.cm \
 	$$TRANSLATIONS
 
 QPMX_EXTRA_OPTIONS += --verbose
