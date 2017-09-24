@@ -1,16 +1,27 @@
 {
-	"priFile": "qpmx-sample-package.pri",
-	"prcFile": "qpmx-sample-package.prc",
-	"license": {
-		"name": "BSD-3-Clause",
-		"file": "LICENSE"
-	},
-	"dependencies": [
-		{
-			"package": "de.skycoder42.dialog-master",
-			"provider": "qpm",
-			"version": "1.2.7"
-		}
-	],
-	"source": false
+    "dependencies": [
+        {
+            "package": "de.skycoder42.dialog-master",
+            "provider": "qpm",
+            "version": "1.2.7"
+        }
+    ],
+    "localIncludes": [
+    ],
+    "prcFile": "qpmx-sample-package.prc",
+    "priFile": "qpmx-sample-package.pri",
+    "publishers": {
+        "git": {
+            "prefix": "",
+            "url": "https://github.com/Skycoder42/qpmx-sample-package.git"
+        },
+        "github": {
+            "prefix": "",
+            "repository": "qpmx-sample-package",
+            "user": "skycoder42"
+        }
+    },
+    "qmakeExtraFlags": [
+    ],
+    "source": false
 }
