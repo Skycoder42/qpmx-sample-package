@@ -1,8 +1,4 @@
 {
-	"license": {
-		"name": "BSD-3-Clause",
-		"file": "LICENSE"
-	},
     "dependencies": [
         {
             "package": "de.skycoder42.dialog-master",
@@ -10,6 +6,10 @@
             "version": "1.2.7"
         }
     ],
+    "license": {
+        "file": "LICENSE",
+        "name": "BSD-3-Clause"
+    },
     "localIncludes": [
     ],
     "prcFile": "qpmx-sample-package.prc",
