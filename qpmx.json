@@ -1,4 +1,8 @@
 {
+	"license": {
+		"name": "BSD-3-Clause",
+		"file": "LICENSE"
+	},
     "dependencies": [
         {
             "package": "de.skycoder42.dialog-master",
@@ -11,10 +15,6 @@
     "prcFile": "qpmx-sample-package.prc",
     "priFile": "qpmx-sample-package.pri",
     "publishers": {
-        "git": {
-            "prefix": "",
-            "url": "https://github.com/Skycoder42/qpmx-sample-package.git"
-        },
         "github": {
             "prefix": "",
             "repository": "qpmx-sample-package",
