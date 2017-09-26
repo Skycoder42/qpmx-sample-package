@@ -7,7 +7,7 @@
         "de.skycoder42.dialog-master@1.2.7"
     ],
     "description": "",
-    "license": "BSD-3-Clause",
+    "license": "BSD_3_CLAUSE",
     "name": "de.skycoder.qpmx-sample-package",
     "priFilename": "qpmx-sample-package.pri",
     "pri_filename": "qpmx-sample-package.pri",

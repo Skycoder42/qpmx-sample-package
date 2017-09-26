@@ -31,7 +31,8 @@
                 "type": "GITHUB",
                 "url": "https://github.com/Skycoder42/qpmx-sample-package"
             },
-            "webpage": ""
+            "webpage": "",
+            "license": "BSD_3_CLAUSE"
         }
     },
     "qmakeExtraFlags": [
