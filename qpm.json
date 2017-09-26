@@ -9,7 +9,6 @@
     "description": "",
     "license": "BSD_3_CLAUSE",
     "name": "de.skycoder.qpmx-sample-package",
-    "priFilename": "qpmx-sample-package.pri",
     "pri_filename": "qpmx-sample-package.pri",
     "repository": {
         "type": "GITHUB",
