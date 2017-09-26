@@ -1,0 +1,24 @@
+{
+    "author": {
+        "email": "skycoder42.de@gmx.de",
+        "name": "Skycoder"
+    },
+    "dependencies": [
+        "de.skycoder42.dialog-master@1.2.7"
+    ],
+    "description": "",
+    "license": "BSD-3-Clause",
+    "name": "de.skycoder.qpmx-sample-package",
+    "priFilename": "qpmx-sample-package.pri",
+    "pri_filename": "qpmx-sample-package.pri",
+    "repository": {
+        "type": "GITHUB",
+        "url": "https://github.com/Skycoder42/qpmx-sample-package"
+    },
+    "version": {
+        "fingerprint": "",
+        "label": "0.0.1",
+        "revision": ""
+    },
+    "webpage": ""
+}
