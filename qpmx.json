@@ -10,7 +10,7 @@
         "file": "LICENSE",
         "name": "BSD-3-Clause"
     },
-    "localIncludes": [
+    "priIncludes": [
     ],
     "prcFile": "qpmx-sample-package.prc",
     "priFile": "qpmx-sample-package.pri",
@@ -35,7 +35,5 @@
             "license": "BSD_3_CLAUSE"
         }
     },
-    "qmakeExtraFlags": [
-    ],
     "source": false
 }
