@@ -16,6 +16,10 @@ DISTFILES += qpmx.json \
 	qpmx.json.user.cm \
 	$$TRANSLATIONS
 
+target.path = $$[QT_INSTALL_BINS]
+qpmx_ts_target.path = $$[QT_INSTALL_TRANSLATIONS]
+INSTALLS += target qpmx_ts_target
+
 QPMX_EXTRA_OPTIONS += --verbose --stderr
 QPMX_TRANSLATE_EXTRA_OPTIONS += --verbose
 
