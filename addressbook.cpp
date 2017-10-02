@@ -7,6 +7,24 @@
 #endif
 #endif
 
+#ifndef QPMX_STARTUP_HOOK
+#error qpmx startup not implemented
+#define QPMX_STARTUP_HOOK(x)
+#endif
+
+static bool startupCheck = false;
+
+static void startupHook()
+{
+	startupCheck = true;
+}
+QPMX_STARTUP_HOOK(startupHook)
+
+AddressBook::AddressBook()
+{
+	Q_ASSERT_X(startupCheck, Q_FUNC_INFO, "startup function not called!");
+}
+
 bool AddressBook::contains(const QString &name) const
 {
 	return _data.contains(name);
