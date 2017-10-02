@@ -7,3 +7,5 @@ HEADERS += $$PWD/addressbook.h
 SOURCES += $$PWD/addressbook.cpp
 
 TRANSLATIONS += $$PWD/addressbook_de.ts
+
+qpmx_static: CONFIG += qpmx_startup_hook
