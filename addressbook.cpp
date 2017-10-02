@@ -1,5 +1,6 @@
 #include "addressbook.h"
 #include <dialogmaster.h>
+#include <QDebug>
 
 #ifndef Q_OS_WIN
 #ifdef QPMX_TEST_AVAILABLE
@@ -16,13 +17,17 @@ static bool startupCheck = false;
 
 static void startupHook()
 {
+	qDebug() << "running startup hook";
 	startupCheck = true;
 }
 QPMX_STARTUP_HOOK(startupHook)
 
 AddressBook::AddressBook()
 {
-	Q_ASSERT_X(startupCheck, Q_FUNC_INFO, "startup function not called!");
+	if(!startupCheck)
+		qFatal("startup hook was not run");
+	else
+		qDebug() << "startup status:" << startupCheck;
 }
 
 bool AddressBook::contains(const QString &name) const
