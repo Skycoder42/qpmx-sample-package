@@ -6,7 +6,8 @@ CONFIG += c++11 console
 CONFIG -= app_bundle
 
 SOURCES += \
-	main.cpp
+	main.cpp \
+    baum.cpp
 
 TRANSLATIONS += test_de.ts \
 	$$PWD/test_en.ts
