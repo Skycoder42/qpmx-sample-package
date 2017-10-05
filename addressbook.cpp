@@ -11,7 +11,7 @@
 
 static bool startupCheck = false;
 
-static void qpmx_sample_package_startupHook()
+void qpmx_sample_package_startupHook()
 {
 	qDebug() << "running startup hook";
 	if(QFile::exists(QStringLiteral(":/testfile.txt")))
