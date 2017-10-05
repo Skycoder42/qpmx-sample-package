@@ -3,7 +3,7 @@
 		{
 			"package": "https://github.com/skycoder42/qpmx-sample-package.git",
 			"provider": "git",
-			"version": "1.0.10"
+			"version": "1.0.11"
 		},
 		{
 			"package": "de.skycoder42.dialog-master",

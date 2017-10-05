@@ -9,14 +9,9 @@
 #endif
 #endif
 
-#ifndef QPMX_STARTUP_HOOK
-#error qpmx startup not implemented
-#define QPMX_STARTUP_HOOK(x)
-#endif
-
 static bool startupCheck = false;
 
-static void startupHook()
+static void qpmx_sample_package_startupHook()
 {
 	qDebug() << "running startup hook";
 	if(QFile::exists(QStringLiteral(":/testfile.txt")))
@@ -24,7 +19,6 @@ static void startupHook()
 	else
 		qCritical() << "Unable to find resource file!";
 }
-QPMX_STARTUP_HOOK(startupHook)
 
 AddressBook::AddressBook()
 {
