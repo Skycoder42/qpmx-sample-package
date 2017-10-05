@@ -1,6 +1,7 @@
 #include "addressbook.h"
 #include <dialogmaster.h>
 #include <QDebug>
+#include <QFile>
 
 #ifndef Q_OS_WIN
 #ifdef QPMX_TEST_AVAILABLE
@@ -18,7 +19,10 @@ static bool startupCheck = false;
 static void startupHook()
 {
 	qDebug() << "running startup hook";
-	startupCheck = true;
+	if(QFile::exists(QStringLiteral(":/testfile.txt")))
+		startupCheck = true;
+	else
+		qCritical() << "Unable to find resource file!";
 }
 QPMX_STARTUP_HOOK(startupHook)
 
