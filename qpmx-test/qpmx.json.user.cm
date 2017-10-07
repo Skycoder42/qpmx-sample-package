@@ -3,8 +3,8 @@
 		{
 			"package": "https://github.com/skycoder42/qpmx-sample-package.git",
 			"provider": "git",
-			"version": "1.0.12",
-			"path": "../qpmx-sample-package.pri"
+			"version": "1.0.13",
+			"path": ".."
 		}
 	]
 }
