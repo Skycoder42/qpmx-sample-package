@@ -10,5 +10,3 @@ SOURCES += $$PWD/addressbook.cpp
 RESOURCES += $$PWD/qpmx-sample-package.qrc
 
 TRANSLATIONS += $$PWD/addressbook_de.ts
-
-qpmx_static: CONFIG += qpmx_startup_hook
