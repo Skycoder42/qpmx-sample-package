@@ -21,7 +21,7 @@ target.path = $$[QT_INSTALL_BINS]
 qpmx_ts_target.path = $$[QT_INSTALL_TRANSLATIONS]
 INSTALLS += target qpmx_ts_target
 
-QPMX_EXTRA_OPTIONS += --verbose --stderr
+QPMX_EXTRA_OPTIONS += --verbose --stderr --dev-cache "/tmp"
 QPMX_TRANSLATE_EXTRA_OPTIONS += --verbose
 QPMX_HOOK_EXTRA_OPTIONS += --verbose
 
