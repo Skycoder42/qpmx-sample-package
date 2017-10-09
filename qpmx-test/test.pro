@@ -7,7 +7,7 @@ CONFIG -= app_bundle
 
 SOURCES += \
 	main.cpp \
-    baum.cpp
+	baum.cpp
 
 TRANSLATIONS += test_de.ts \
 	$$PWD/test_en.ts
@@ -33,4 +33,3 @@ QMAKE_EXTRA_TARGETS -= qpmlupdate qpmlrelease qpmlcombine
 
 message(SOURCES = $$SOURCES)
 message(TRANSLATIONS = $$TRANSLATIONS)
-message(INCLUDEPATH = $$INCLUDEPATH)

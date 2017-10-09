@@ -3,17 +3,17 @@
         {
             "package": "de.skycoder42.dialog-master",
             "provider": "qpm",
-            "version": "1.2.7"
+            "version": "1.3.0"
         }
     ],
     "license": {
         "file": "LICENSE",
         "name": "BSD-3-Clause"
     },
-    "priIncludes": [
-    ],
     "prcFile": "qpmx-sample-package.prc",
     "priFile": "qpmx-sample-package.pri",
+    "priIncludes": [
+    ],
     "publishers": {
         "github": {
             "prefix": "",
@@ -26,13 +26,13 @@
                 "name": "Skycoder"
             },
             "description": "",
+            "license": "BSD_3_CLAUSE",
             "name": "de.skycoder.qpmx-sample-package",
             "repository": {
                 "type": "GITHUB",
                 "url": "https://github.com/Skycoder42/qpmx-sample-package"
             },
-            "webpage": "",
-            "license": "BSD_3_CLAUSE"
+            "webpage": ""
         }
     },
     "source": false
