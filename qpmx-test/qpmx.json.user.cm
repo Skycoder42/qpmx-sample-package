@@ -1,5 +1,5 @@
 {
-	"devmode": [
+	"devDependencies": [
 		{
 			"package": "https://github.com/skycoder42/qpmx-sample-package.git",
 			"provider": "git",
