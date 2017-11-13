@@ -12,10 +12,13 @@ SOURCES += \
 TRANSLATIONS += test_de.ts \
 	$$PWD/test_en.ts
 
+EXTRA_TRANSLATIONS += extra_de.ts
+
 DISTFILES += qpmx.json \
 	qpmx.json.src \
 	qpmx.json.user.cm \
-	$$TRANSLATIONS
+	$$TRANSLATIONS \
+	$$EXTRA_TRANSLATIONS
 
 target.path = $$[QT_INSTALL_BINS]
 qpmx_ts_target.path = $$[QT_INSTALL_TRANSLATIONS]
@@ -28,8 +31,5 @@ QPMX_HOOK_EXTRA_OPTIONS += --verbose
 !ReleaseBuild:!DebugBuild:!system(qpmx -d $$shell_quote($$_PRO_FILE_PWD_) --qmake-run init $$QPMX_EXTRA_OPTIONS $$shell_quote($$QMAKE_QMAKE) $$shell_quote($$OUT_PWD)): error(qpmx initialization failed)
 else: include($$OUT_PWD/qpmx_generated.pri)
 
-#debug to disable qpm-translate artifacts
-QMAKE_EXTRA_TARGETS -= qpmlupdate qpmlrelease qpmlcombine
-
 message(SOURCES = $$SOURCES)
-message(TRANSLATIONS = $$TRANSLATIONS)
+message(TRANSLATIONS = $$TRANSLATIONS $$EXTRA_TRANSLATIONS)
