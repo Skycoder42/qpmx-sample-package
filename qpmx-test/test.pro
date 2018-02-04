@@ -1,4 +1,11 @@
-TEMPLATE = app
+test_as_static {
+	TEMPLATE = lib
+	CONFIG += static
+} else:test_as_shared {
+	TEMPLATE = lib
+} else {
+	TEMPLATE = app
+}
 
 QT += core gui widgets network
 
@@ -31,8 +38,10 @@ QPMX_HOOK_EXTRA_OPTIONS += --verbose
 qtPrepareTool(LRELEASE, lrelease)
 LRELEASE += -nounfinished
 
+system($$QMAKE_DEL_FILE $$shell_quote($$OUT_PWD)/qpmx_generated.pri))
 !ReleaseBuild:!DebugBuild:!system(qpmx -d $$shell_quote($$_PRO_FILE_PWD_) --qmake-run init $$QPMX_EXTRA_OPTIONS $$shell_quote($$QMAKE_QMAKE) $$shell_quote($$OUT_PWD)): error(qpmx initialization failed)
 else: include($$OUT_PWD/qpmx_generated.pri)
 
 message(SOURCES = $$SOURCES)
 message(TRANSLATIONS = $$TRANSLATIONS $$EXTRA_TRANSLATIONS)
+message(CONFIG = $$CONFIG)
