@@ -28,6 +28,9 @@ QPMX_EXTRA_OPTIONS += --verbose --stderr --dev-cache "/tmp"
 QPMX_TRANSLATE_EXTRA_OPTIONS += --verbose
 QPMX_HOOK_EXTRA_OPTIONS += --verbose
 
+qtPrepareTool(LRELEASE, lrelease)
+LRELEASE += -nounfinished
+
 !ReleaseBuild:!DebugBuild:!system(qpmx -d $$shell_quote($$_PRO_FILE_PWD_) --qmake-run init $$QPMX_EXTRA_OPTIONS $$shell_quote($$QMAKE_QMAKE) $$shell_quote($$OUT_PWD)): error(qpmx initialization failed)
 else: include($$OUT_PWD/qpmx_generated.pri)
 
