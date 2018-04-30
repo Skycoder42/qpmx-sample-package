@@ -5,7 +5,10 @@ Project {
 
 	CppApplication {
 		id: test
-		Depends { name: "Qt" submodules: ["core", "gui", "widgets"] }
+		Depends {
+			name: "Qt"
+			submodules: ["core", "gui", "widgets"]
+		}
 		Depends { name: "qpmx" }
 
 		cpp.cxxLanguageVersion: "c++11"
@@ -14,8 +17,9 @@ Project {
 		]
 
 		qpmx.logLevel: "verbose"
-		qpmx.stderr: true
-		qpmx.devCache: "/tmp"
+		qpmx.forwardStderr: true
+		qpmx.qpmxDir: sourceDirectory
+		qpmx.autoProbe: false
 
 		files: [
 			"baum.cpp",
