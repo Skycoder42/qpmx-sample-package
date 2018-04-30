@@ -7,7 +7,7 @@ test_as_static {
 	TEMPLATE = app
 }
 
-QT += core gui widgets network
+QT += core gui widgets
 
 CONFIG += c++11 console
 CONFIG -= app_bundle

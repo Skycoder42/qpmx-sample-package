@@ -12,6 +12,7 @@
     },
     "prcFile": "qpmx-sample-package.prc",
     "priFile": "qpmx-sample-package.pri",
+    "qbsFile": "qpmx-sample-package.qbs",
     "priIncludes": [
     ],
     "publishers": {

@@ -5,7 +5,7 @@ Project {
 
 	CppApplication {
 		id: test
-		Depends { name: "Qt.core" }
+		Depends { name: "Qt" submodules: ["core", "gui", "widgets"] }
 		Depends { name: "qpmx" }
 
 		cpp.cxxLanguageVersion: "c++11"
