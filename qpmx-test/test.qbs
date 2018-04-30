@@ -31,6 +31,7 @@ Project {
 		]
 
 		Group {
+			name: "translations"
 			fileTags: ["qpmx-ts"]
 			files: [
 				"test_de.ts",
@@ -43,6 +44,12 @@ Project {
 			qbs.install: true
 
 			//TODO install translations
+		}
+
+		Group {
+			fileTagsFilter: "qm"
+			qbs.install: true
+			qbs.installDir: "translations"
 		}
 	}
 }
