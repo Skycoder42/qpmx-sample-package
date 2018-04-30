@@ -14,10 +14,7 @@ static bool startupCheck = false;
 void _qpmx_local_startup_hook() //named the same on purpose
 {
 	qDebug() << "running startup hook";
-	if(QFile::exists(QStringLiteral(":/testfile.txt")))
-		startupCheck = true;
-	else
-		qCritical() << "Unable to find resource file!";
+	startupCheck = true;
 }
 Q_COREAPP_STARTUP_FUNCTION(_qpmx_local_startup_hook)
 
@@ -25,6 +22,8 @@ AddressBook::AddressBook()
 {
 	if(!startupCheck)
 		qFatal("startup hook was not run");
+	else if(!QFile::exists(QStringLiteral(":/testfile.txt")))
+		qFatal("Unable to find resource file!");
 	else
 		qDebug() << "startup status:" << startupCheck;
 }
