@@ -20,7 +20,6 @@ Project {
 
 		qpmx.logLevel: "verbose"
 		qpmx.forwardStderr: true
-		qpmx.qpmxDir: sourceDirectory
 		qpmx.autoProbe: false
 
 		files: [
@@ -79,7 +78,6 @@ Project {
 
 		qpmx.logLevel: "verbose"
 		qpmx.forwardStderr: true
-		qpmx.qpmxDir: sourceDirectory
 		qpmx.autoProbe: false
 
 		files: [
