@@ -4,7 +4,9 @@ Project {
 	minimumQbsVersion: "1.7.1"
 
 	CppApplication {
-		id: test
+		id: testApp
+		name: "test-app"
+
 		Depends {
 			name: "Qt"
 			submodules: ["core", "gui", "widgets"]
@@ -51,5 +53,39 @@ Project {
 			qbs.install: true
 			qbs.installDir: "translations"
 		}
+	}
+
+	StaticLibrary {
+		id: testLib
+		name: "test-static-lib"
+
+		Depends {
+			name: "Qt"
+			submodules: ["core", "gui", "widgets"]
+		}
+		Depends { name: "qpmx" }
+
+		Group {
+			fileTagsFilter: "staticlibrary-merged"
+			qbs.install: true
+			qbs.installDir: "lib"
+		}
+
+		cpp.cxxLanguageVersion: "c++11"
+		cpp.defines: [
+			"QT_DEPRECATED_WARNINGS",
+		]
+
+		qpmx.logLevel: "verbose"
+		qpmx.forwardStderr: true
+		qpmx.qpmxDir: sourceDirectory
+		qpmx.autoProbe: false
+		qpmx.mergeLibs: true
+
+		files: [
+			"baum.cpp",
+			"main.cpp",
+			"qpmx.json"
+		]
 	}
 }
