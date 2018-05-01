@@ -58,6 +58,7 @@ Project {
 	StaticLibrary {
 		id: testLib
 		name: "test-static-lib"
+		type: ["staticlibrary-merged"]
 
 		Depends {
 			name: "Qt"
@@ -80,7 +81,6 @@ Project {
 		qpmx.forwardStderr: true
 		qpmx.qpmxDir: sourceDirectory
 		qpmx.autoProbe: false
-		qpmx.mergeLibs: true
 
 		files: [
 			"baum.cpp",
