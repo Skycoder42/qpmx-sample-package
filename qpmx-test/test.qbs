@@ -19,8 +19,6 @@ Project {
 		]
 
 		qpmx.logLevel: "verbose"
-		qpmx.forwardStderr: true
-		qpmx.autoProbe: false
 
 		files: [
 			"baum.cpp",
@@ -43,8 +41,6 @@ Project {
 		Group {
 			fileTagsFilter: "application"
 			qbs.install: true
-
-			//TODO install translations
 		}
 
 		Group {
@@ -54,10 +50,9 @@ Project {
 		}
 	}
 
-	StaticLibrary {
+	MergedStaticLibrary {
 		id: testLib
 		name: "test-static-lib"
-		type: ["staticlibrary-merged"]
 
 		Depends {
 			name: "Qt"
@@ -65,25 +60,23 @@ Project {
 		}
 		Depends { name: "qpmx" }
 
-		Group {
-			fileTagsFilter: "staticlibrary-merged"
-			qbs.install: true
-			qbs.installDir: "lib"
-		}
-
 		cpp.cxxLanguageVersion: "c++11"
 		cpp.defines: [
 			"QT_DEPRECATED_WARNINGS",
 		]
 
 		qpmx.logLevel: "verbose"
-		qpmx.forwardStderr: true
-		qpmx.autoProbe: false
 
 		files: [
 			"baum.cpp",
 			"main.cpp",
 			"qpmx.json"
 		]
+
+		Group {
+			fileTagsFilter: "qpmx-staticlibrary-merged"
+			qbs.install: true
+			qbs.installDir: "lib"
+		}
 	}
 }
