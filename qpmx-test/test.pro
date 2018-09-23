@@ -9,7 +9,7 @@ test_as_static {
 
 QT += core gui widgets
 
-CONFIG += c++11 console
+CONFIG += c++14 console
 CONFIG -= app_bundle
 
 SOURCES += \
