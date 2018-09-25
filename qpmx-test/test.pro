@@ -38,11 +38,12 @@ QPMX_HOOK_EXTRA_OPTIONS += --verbose
 qtPrepareTool(LRELEASE, lrelease)
 LRELEASE += -nounfinished
 
+message($(DYLD_LIBRARY_PATH))
+
 system($$QMAKE_DEL_FILE $$shell_quote($$OUT_PWD)/qpmx_generated.pri))
 !ReleaseBuild:!DebugBuild:!system(qpmx -d $$shell_quote($$_PRO_FILE_PWD_) --qmake-run init $$QPMX_EXTRA_OPTIONS $$shell_quote($$QMAKE_QMAKE) $$shell_quote($$OUT_PWD)): error(qpmx initialization failed)
 else: include($$OUT_PWD/qpmx_generated.pri)
 
-message($(DYLD_LIBRARY_PATH))
 message(SOURCES = $$SOURCES)
 message(TRANSLATIONS = $$TRANSLATIONS $$EXTRA_TRANSLATIONS)
 message(CONFIG = $$CONFIG)
